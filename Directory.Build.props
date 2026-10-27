@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Cache NuGet para referencias HintPath en proyectos no-SDK (Web Forms) -->
+    <NuGetPackageRoot Condition="'$(NuGetPackageRoot)' == ''">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+  </PropertyGroup>
+</Project>

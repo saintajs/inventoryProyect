@@ -1,0 +1,259 @@
+/* Inventario — tema sobre Bootstrap 3 */
+:root {
+    --inv-primary: #1e3a5f;
+    --inv-primary-hover: #2a5082;
+    --inv-primary-active: #152a45;
+    --inv-surface: #ffffff;
+    --inv-page-bg: #eef1f5;
+    --inv-border: #d8dee6;
+    --inv-text: #1a1d21;
+    --inv-text-muted: #5c6570;
+    --inv-radius: 10px;
+    --inv-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    --inv-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --inv-focus-ring: 0 0 0 3px rgba(30, 58, 95, 0.25);
+}
+
+.inv-toolbar {
+    margin-bottom: 1rem;
+}
+
+.inv-btn-nuevo {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.25);
+}
+
+.inv-btn-nuevo .glyphicon {
+    margin-right: 6px;
+}
+
+.inv-modal .modal-header {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+    border-bottom: 1px solid var(--inv-border);
+    border-radius: var(--inv-radius) var(--inv-radius) 0 0;
+}
+
+.inv-modal .modal-title {
+    color: var(--inv-primary);
+    font-weight: 600;
+}
+
+.inv-modal .modal-body {
+    padding: 20px 22px;
+}
+
+.inv-modal .modal-footer {
+    border-top: 1px solid var(--inv-border);
+    padding: 12px 16px;
+}
+
+.inv-modal .form-group label {
+    color: var(--inv-text);
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.inv-modal .form-control {
+    border-radius: 8px;
+    border: 1px solid var(--inv-border);
+    padding: 10px 14px;
+    height: auto;
+    min-height: 40px;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: var(--inv-shadow-sm);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inv-modal .form-control:focus {
+    border-color: var(--inv-primary);
+    box-shadow: var(--inv-focus-ring);
+    outline: none;
+}
+
+.inv-modal-error.hide {
+    display: none !important;
+}
+
+.inv-btn-submit-modal {
+    padding: 8px 22px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    background: linear-gradient(180deg, var(--inv-primary-hover) 0%, var(--inv-primary) 100%) !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.35);
+}
+
+.inv-btn-submit-modal:hover,
+.inv-btn-submit-modal:focus {
+    background: linear-gradient(180deg, #356099 0%, var(--inv-primary-hover) 100%) !important;
+    color: #fff !important;
+}
+
+.inv-page {
+    background: var(--inv-page-bg);
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -10px;
+    padding: 1.5rem 15px 2rem;
+    min-height: calc(100vh - 120px);
+}
+
+@media screen and (min-width: 768px) {
+    .inv-page {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.inv-grid-wrap {
+    background: var(--inv-surface);
+    border-radius: var(--inv-radius);
+    box-shadow: var(--inv-shadow);
+    border: 1px solid var(--inv-border);
+    padding: 0;
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+}
+
+.inv-grid-wrap .table-responsive {
+    margin-bottom: 0;
+    border: none;
+}
+
+.inv-grid {
+    margin-bottom: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.inv-grid thead th {
+    background: linear-gradient(180deg, var(--inv-primary) 0%, #162d4a 100%);
+    color: #f0f4f8;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: none !important;
+    padding: 14px 16px !important;
+    vertical-align: middle !important;
+}
+
+.inv-grid tbody td {
+    padding: 12px 16px !important;
+    vertical-align: middle !important;
+    color: var(--inv-text);
+    border-color: #e8ecf0 !important;
+}
+
+.inv-grid.table-bordered > thead > tr > th,
+.inv-grid.table-bordered > tbody > tr > td {
+    border-color: #e8ecf0;
+}
+
+.inv-grid tbody tr:hover td {
+    background-color: #f4f7fb !important;
+}
+
+.inv-grid tbody tr:nth-child(even) td {
+    background-color: #fafbfc;
+}
+
+.inv-grid tbody tr:nth-child(even):hover td {
+    background-color: #eef2f7 !important;
+}
+
+.inv-grid a,
+.inv-grid a:visited {
+    color: #c0392b;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.inv-grid a:hover {
+    background-color: #fde8e6;
+    color: #922b21;
+    text-decoration: none;
+}
+
+/* Card / formulario */
+.inv-card {
+    border-radius: var(--inv-radius) !important;
+    box-shadow: var(--inv-shadow) !important;
+    border-color: var(--inv-border) !important;
+    overflow: hidden;
+}
+
+.inv-card .panel-heading,
+.inv-card-header {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%) !important;
+    border-bottom: 1px solid var(--inv-border) !important;
+    padding: 14px 18px !important;
+}
+
+.inv-card .panel-title {
+    color: var(--inv-primary);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.inv-card .panel-body {
+    padding: 20px 18px 24px !important;
+}
+
+.inv-card .form-group label {
+    color: var(--inv-text);
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.inv-card .form-control {
+    border-radius: 8px;
+    border: 1px solid var(--inv-border);
+    padding: 10px 14px;
+    height: auto;
+    min-height: 40px;
+    box-shadow: var(--inv-shadow-sm);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inv-card .form-control:focus {
+    border-color: var(--inv-primary);
+    box-shadow: var(--inv-focus-ring);
+    outline: none;
+}
+
+.inv-btn-submit {
+    margin-top: 8px;
+    padding: 10px 28px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+    border: none !important;
+    background: linear-gradient(180deg, var(--inv-primary-hover) 0%, var(--inv-primary) 100%) !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.35);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.inv-btn-submit:hover,
+.inv-btn-submit:focus {
+    background: linear-gradient(180deg, #356099 0%, var(--inv-primary-hover) 100%) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.4);
+    color: #fff !important;
+}
+
+.inv-btn-submit:active {
+    transform: translateY(1px);
+    background: var(--inv-primary-active) !important;
+}
